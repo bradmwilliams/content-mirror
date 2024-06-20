@@ -17,4 +17,4 @@ RUN INSTALL_PKGS=" \
     chmod -R uga+rwx /var/cache/nginx /var/log/nginx /run
 USER 1001
 EXPOSE 8080 40000
-CMD ["/usr/bin/dlv", "--listen=:40000", "--headless=true", "--api-version=2", "--accept-multiclient", "exec", "/usr/bin/content-mirror", "--", "-v", "--path=/tmp/config", "/tmp/repos"]
+CMD ["/usr/bin/dlv", "--listen=:40000", "--headless=true", "--api-version=2", "--accept-multiclient", "exec", "/usr/bin/content-mirror", "--", "-v", "--path=/tmp/config", "/tmp/repos", "/tmp/key", "/tmp/mirror-enterprise-basic-auth"]
